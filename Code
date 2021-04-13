@@ -53,4 +53,3 @@ summary(results)
 R2(predict_values, test_values) 
 coef(model)
 
-names(all_sales)
