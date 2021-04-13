@@ -1,7 +1,7 @@
 library(tidyverse)
 library(caret)
 #training dataset
-training_data <- read_csv('/home/blackwallstreet/Documents/MIS470housingtraining.csv')
+training_data <- read_csv('housingtraining.csv')
 training_sales <-data.frame("Sales" =training_data$SalePrice)
 training_std <- sd(training_sales$Sales, na.rm = TRUE) 
 sum(is.na(training_data))
@@ -11,7 +11,7 @@ hist(training_sales$Sales, main = "Training Sale Price Distribution", xlab = "Sa
 options(scipen=999)
 
 #testing dataset
-testing_data <- read_csv('/home/blackwallstreet/Documents/MIS470housingtesting.csv')
+testing_data <- read_csv('housingtesting.csv')
 testing_sales <-data.frame("Sales" =testing_data$SalePrice)
 testing_std <- round(sd(testing_sales$Sales, na.rm = TRUE), digits = 2)
 summary(testing_sales) 
